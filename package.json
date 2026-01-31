@@ -4,10 +4,10 @@
   "description": "The missing object browser for vscode",
   "version": "0.1.0-alpha.1",
   "preview": true,
-  "publisher": "YOUR_PUBLISHER_ID",
+  "publisher": "umstek",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/type-explorer"
+    "url": "https://github.com/umstek/type-explorer"
   },
   "engines": {
     "vscode": "^1.108.1"
