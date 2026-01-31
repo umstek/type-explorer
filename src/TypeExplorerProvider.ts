@@ -435,6 +435,7 @@ export class TypeExplorerProvider implements vscode.TreeDataProvider<ExplorerNod
         return undefined;
     }
 
+
     private escapeRegex(str: string): string {
         return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
@@ -522,20 +523,12 @@ export class TypeExplorerProvider implements vscode.TreeDataProvider<ExplorerNod
                 ? item.label.detail
                 : (item.detail || '');
 
-            // Try to get documentation from completion resolve first
+            // Use documentation already present on the completion item (no resolve)
             let documentation: string | undefined;
-            try {
-                const resolved = await vscode.commands.executeCommand<vscode.CompletionItem>(
-                    'vscode.executeCompletionItemResolveProvider',
-                    item
-                );
-                if (resolved?.documentation) {
-                    documentation = typeof resolved.documentation === 'string'
-                        ? resolved.documentation
-                        : resolved.documentation.value;
-                }
-            } catch {
-                // Ignore
+            if (item.documentation) {
+                documentation = typeof item.documentation === 'string'
+                    ? item.documentation
+                    : item.documentation.value;
             }
 
             // If no documentation from completion, try hover on the symbol if it's imported
