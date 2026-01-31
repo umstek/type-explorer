@@ -1,71 +1,52 @@
-# type-explorer README
+# Type Explorer
 
-This is the README for your extension "type-explorer". After writing up a brief description, we recommend including the following sections.
+> ⚠️ **Preview** - This extension is in early development.
+
+The missing Object Browser for VS Code. Browse imports, explore module exports, and view documentation without leaving your editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Browse Imports** - See all modules imported in your current file
+- **Explore Exports** - Expand any module to see its available classes, functions, types, and constants
+- **View Documentation** - Click any member to view its full documentation in a side panel
+- **Browse Any Package** - Explore installed packages even before importing them
 
-For example if there is an image subfolder under your extension project workspace:
+![Type Explorer](images/type-explorer.png)
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+1. Open the **Type Explorer** panel in the Explorer sidebar
+2. Your current file's imports appear as expandable nodes
+3. Click the expand arrow to see available exports from each module
+4. Click any export to view its documentation
+5. Use the **Browse Package** button to explore packages you haven't imported yet
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- Works with TypeScript and JavaScript files
+- Requires a language server (TypeScript, ESLint, etc.) for best results
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Documentation may not be available for some dynamically typed modules
+- Some completion items may appear that aren't actual exports
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0-alpha.1
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial preview release:
+- Import detection for TypeScript/JavaScript
+- Module export browsing via completions
+- Documentation panel with Markdown rendering
+- Browse any installed package
 
 ---
 
-## Following extension guidelines
+## Contributing
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+This extension is open source. Contributions welcome!
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## License
 
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+MIT
