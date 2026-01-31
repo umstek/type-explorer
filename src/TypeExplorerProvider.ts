@@ -190,17 +190,7 @@ export class TypeExplorerProvider implements vscode.TreeDataProvider<ExplorerNod
         const text = document.getText();
         const modules = new Map<string, ImportNode>();
 
-        // Match all import statements and group by module
-        const patterns = [
-            // import X from 'module' or import { X } from 'module'
-            { regex: /import\s+(?:\w+\s*,?\s*)?(?:\{[^}]*\})?\s*from\s*['"]([^'"]+)['"]/g, isNamespace: false },
-            // import * as X from 'module'
-            { regex: /import\s+\*\s+as\s+(\w+)\s+from\s+['"]([^'"]+)['"]/g, isNamespace: true },
-            // import type { X } from 'module'
-            { regex: /import\s+type\s+\{[^}]*\}\s+from\s+['"]([^'"]+)['"]/g, isNamespace: false },
-        ];
-
-        // Standard imports
+        // Standard imports: import X from 'module' or import { X } from 'module'
         const standardRegex = /import\s+(?:(\w+)\s*,?\s*)?(?:\{([^}]*)\})?\s*from\s*['"]([^'"]+)['"]/g;
         let match;
         while ((match = standardRegex.exec(text)) !== null) {
