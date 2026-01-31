@@ -33,7 +33,7 @@ The missing Object Browser for VS Code. Browse imports, explore module exports, 
 
 ## Release Notes
 
-### 0.1.0-alpha.1
+### 0.1.0
 
 Initial preview release:
 - Import detection for TypeScript/JavaScript

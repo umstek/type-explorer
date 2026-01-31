@@ -2,7 +2,7 @@
   "name": "type-explorer",
   "displayName": "Type Explorer (Preview)",
   "description": "The missing object browser for vscode",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0",
   "preview": true,
   "publisher": "umstek",
   "repository": {

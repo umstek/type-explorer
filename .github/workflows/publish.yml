@@ -23,4 +23,9 @@ jobs:
         run: npm install -g @vscode/vsce
 
       - name: Publish to VS Code Marketplace
-        run: vsce publish -p ${{ secrets.VSCE_PAT }}
+        run: |
+          if [ "${{ github.event.release.prerelease }}" = "true" ]; then
+            vsce publish --pre-release -p ${{ secrets.VSCE_PAT }}
+          else
+            vsce publish -p ${{ secrets.VSCE_PAT }}
+          fi
