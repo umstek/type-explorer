@@ -1,8 +1,14 @@
 {
   "name": "type-explorer",
-  "displayName": "Type Explorer",
+  "displayName": "Type Explorer (Preview)",
   "description": "The missing object browser for vscode",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.1",
+  "preview": true,
+  "publisher": "YOUR_PUBLISHER_ID",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/type-explorer"
+  },
   "engines": {
     "vscode": "^1.108.1"
   },
