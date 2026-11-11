@@ -2,5 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "typescript-eslint 8.x supports TypeScript <6.1",
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "allowedVersions": "<6.1.0"
+    }
   ]
 }
