@@ -4,14 +4,16 @@
 
 The missing Object Browser for VS Code. Browse imports, explore module exports, and view documentation without leaving your editor.
 
+## Install
+
+Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=umstek.umstek-type-explorer).
+
 ## Features
 
 - **Browse Imports** - See all modules imported in your current file
 - **Explore Exports** - Expand any module to see its available classes, functions, types, and constants
 - **View Documentation** - Click any member to view its full documentation in a side panel
 - **Browse Any Package** - Explore installed packages even before importing them
-
-![Type Explorer](images/type-explorer.png)
 
 ## Usage
 
@@ -32,6 +34,16 @@ The missing Object Browser for VS Code. Browse imports, explore module exports, 
 - Some completion items may appear that aren't actual exports
 
 ## Release Notes
+
+### 0.2.1
+
+- Removed a broken screenshot link from the Marketplace README.
+- Updated dependencies, CI, and the extension test suite.
+
+### 0.2.0
+
+- Renamed the extension package to `umstek-type-explorer`.
+- Added the MIT license file.
 
 ### 0.1.0
 
